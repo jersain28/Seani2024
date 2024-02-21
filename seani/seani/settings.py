@@ -33,6 +33,7 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     'libary.apps.LibaryConfig',
     'career.apps.CareerConfig',
+    'exam.apps.ExamConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
