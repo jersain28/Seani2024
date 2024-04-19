@@ -63,6 +63,25 @@ class Exam(models.Model):
             verbose_name = "Fecha de actualizacion",
             auto_now_add = True)
     
+    def compute_score_by_module(self, m_id):
+        score = 0.0
+        questions = self.breakdown_set.filter(question__module_id = m_id)
+        for question in questions:
+            if question.correct == question.answer:
+                score += 10
+        total = score / questions.count()
+        module = self.exammodule_set.get(module_id = m_id)
+        module.score = total
+        module.save()
+    
+    def compute_score(self):
+        score = 0.0
+        modules= self.exammodule_set.all()
+        for module in modules:
+            score += module.score
+        self.score = score / modules.count()
+        self.save()
+
     def set_modules(self):
         for module in Module.objects.all():
             self.modules.add(module)

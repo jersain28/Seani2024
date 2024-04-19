@@ -13,8 +13,8 @@
     {% csrf_token %}
     <input type="radio" name="answer" id="ans0" value="-"
     {% if answer == '-' %}checked{% endif %}
+    style="display: none;"
     >
-    <label for="ans0">Respuesta Inicial</label>
     <br>
     <input type="radio" name="answer" id="ans1" value="A"
     {% if answer == 'A' %}checked{% endif %}

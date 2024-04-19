@@ -1,0 +1,98 @@
+/* Estilos generales */
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  width: 19%;
+  text-align: center;
+}
+
+/* Estilos para los enlaces */
+.container a,
+a {
+  text-decoration: none;
+  color: #007bff;
+}
+
+.container a:hover,
+a:hover {
+  text-decoration: underline;
+}
+
+/* Estilos para los campos del formulario */
+.container form input[type="text"],
+.container form input[type="password"],
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+/* Estilos para los botones de enviar */
+.container form input[type="submit"],
+input[type="submit"] {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.container form input[type="submit"]:hover,
+input[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+/* Estilos para el botón de salir */
+.container form input[type="submit"].logout,
+input[type="submit"].logout {
+  background-color: #dc3545;
+}
+
+.container form input[type="submit"].logout:hover,
+input[type="submit"].logout:hover {
+  background-color: #c82333;
+}
+
+/* Estilos para el encabezado */
+h1 {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+h2 {
+  color: #555;
+  margin-bottom: 10px;
+}
+
+/* Estilos para la imagen */
+img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+/* Estilos para el formulario */
+form {
+  margin-top: 20px;
+}
+
+/* Estilos para los radios */
+input[type="radio"] {
+  display: none;
+}
+
+input[type="radio"]+label {
+  display: inline-block;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
